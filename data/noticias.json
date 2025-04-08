@@ -1,0 +1,31 @@
+{
+  "noticias": [
+    {
+      "id": 1,
+      "titulo": "Novidades do projeto Erguer",
+      "resumo": "O Projeto Erguer é destaque nas principais mídias nacionais, promovendo a inovação na educação.",
+      "imagem": "img/news1.jpg",
+      "link": "https://exemplo.com/noticia1",
+      "data": "2023-10-15",
+      "topicos": ["Mídia", "Inovação", "Educação"]
+    },
+    {
+      "id": 2,
+      "titulo": "Workshop sobre Aprendizagem Cognitiva",
+      "resumo": "Projeto Erguer realizou workshop com especialistas internacionais sobre métodos inovadores de aprendizagem.",
+      "imagem": "img/news2.jpg",
+      "link": "https://exemplo.com/noticia2",
+      "data": "2023-09-22",
+      "topicos": ["Workshop", "Aprendizagem", "Internacional"]
+    },
+    {
+      "id": 3,
+      "titulo": "Parceria com Instituições Educacionais",
+      "resumo": "Novas parcerias foram estabelecidas com instituições de ensino para expandir o alcance do Projeto Erguer.",
+      "imagem": "img/news3.jpg",
+      "link": "https://exemplo.com/noticia3",
+      "data": "2023-08-30",
+      "topicos": ["Parcerias", "Instituições", "Expansão"]
+    }
+  ]
+}

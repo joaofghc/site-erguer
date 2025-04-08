@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Projeto Erguer</title>
+    <!-- Bootstrap CSS atualizado para versão mais recente -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Adicionar AOS para animações de scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="img/logo.svg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projeto.html">Projeto Erguer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Linha do tempo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contato.html" aria-current="page">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header/Banner Section -->
+    <header class="page-header">
+        <div class="page-header-bg contact-bg"></div>
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content text-center" data-aos="fade-up">
+                <h1 class="display-4 fw-bold">Entre em Contato</h1>
+                <p class="lead">Estamos à disposição para responder suas dúvidas e ouvir sugestões</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Seção de contato com formulário e informações -->
+        <section class="contact-section py-5">
+            <div class="container" data-aos="fade-up">
+                <div class="row g-5">
+                    <!-- Informações de contato -->
+                    <div class="col-lg-5 order-lg-2">
+                        <div class="contact-info p-4 rounded shadow-sm">
+                            <h2 class="section-title mb-4">Informações de Contato</h2>
+                            
+                            <div class="contact-item d-flex mb-4">
+                                <div class="icon-wrapper bg-primary-light p-3 me-3 rounded-circle">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h5>Email</h5>
+                                    <p class="mb-0">erguer.projeto@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item d-flex mb-4">
+                                <div class="icon-wrapper bg-secondary-light p-3 me-3 rounded-circle">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5>Telefone</h5>
+                                    <p class="mb-0">(00) 0000-0000</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-item d-flex mb-4">
+                                <div class="icon-wrapper bg-accent-light p-3 me-3 rounded-circle">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h5>Endereço</h5>
+                                    <p class="mb-0">Universidade Federal de São Paulo<br>Campus São Paulo</p>
+                                </div>
+                            </div>
+                            
+                            <div class="social-media mt-5">
+                                <h5>Siga-nos</h5>
+                                <div class="social-icons">
+                                    <a href="#" class="social-icon bg-light rounded-circle p-2 me-2"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="social-icon bg-light rounded-circle p-2 me-2"><i class="fab fa-youtube"></i></a>
+                                    <a href="#" class="social-icon bg-light rounded-circle p-2 me-2"><i class="fab fa-facebook"></i></a>
+                                    <a href="#" class="social-icon bg-light rounded-circle p-2"><i class="fab fa-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulário de contato -->
+                    <div class="col-lg-7 order-lg-1">
+                        <div class="contact-form p-4 rounded shadow-sm">
+                            <h2 class="section-title mb-4">Envie uma Mensagem</h2>
+                            <form id="contactForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="nameInput" placeholder="Seu nome">
+                                            <label for="nameInput">Nome completo</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating mb-3">
+                                            <input type="email" class="form-control" id="emailInput" placeholder="Seu email">
+                                            <label for="emailInput">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="subjectInput" placeholder="Assunto">
+                                            <label for="subjectInput">Assunto</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating mb-3">
+                                            <textarea class="form-control" id="messageInput" style="height: 150px" placeholder="Sua mensagem"></textarea>
+                                            <label for="messageInput">Mensagem</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="checkbox" id="privacyCheck">
+                                            <label class="form-check-label" for="privacyCheck">
+                                                Concordo com a política de privacidade e termos de uso
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-accent rounded-pill py-3 px-5">
+                                            Enviar Mensagem <i class="fas fa-paper-plane ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Mapa -->
+        <section class="map-section">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="map-wrapper" data-aos="fade-up">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.9121631344954!2d-46.64837142383099!3d-23.572528963065978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce599a98628be5%3A0xc77f876ddc746fff!2sUniversidade%20Federal%20de%20S%C3%A3o%20Paulo%20-%20UNIFESP!5e0!3m2!1spt-BR!2sbr!4v1699202417975!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção FAQ -->
+        <section class="faq-section py-5 bg-light">
+            <div class="container" data-aos="fade-up">
+                <h2 class="section-title text-center mb-5">Perguntas Frequentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <!-- Item 1 -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="false" aria-controls="faqOne">
+                                Como posso participar do Projeto Erguer?
+                            </button>
+                        </h2>
+                        <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Para participar do Projeto Erguer, entre em contato conosco através do formulário nesta página ou por email. Temos diferentes formas de participação para escolas, professores e pesquisadores.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">
+                                O projeto oferece materiais para implementação em sala de aula?
+                            </button>
+                        </h2>
+                        <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim, oferecemos diversos recursos e materiais didáticos para professores implementarem as metodologias do Projeto Erguer em suas salas de aula. Esses materiais estão disponíveis na seção de Recursos do nosso site.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">
+                                Como minha escola pode se tornar parceira do projeto?
+                            </button>
+                        </h2>
+                        <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Para que sua escola se torne parceira do Projeto Erguer, entre em contato conosco por email ou pelo formulário de contato. Nossa equipe agendará uma reunião para apresentar o projeto e discutir as possibilidades de parceria.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Sobre</h3>
+                    <p>Em construção...</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="projeto.html" class="text-white">Projeto</a></li>
+                        <li><a href="timeline.html" class="text-white">Linha do tempo</a></li>
+                        <li><a href="recursos.html" class="text-white">Recursos</a></li>
+                        <li><a href="noticias.html" class="text-white">Notícias</a></li>
+                        <li><a href="contato.html" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> erguer.projeto@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-3 border-top border-secondary text-center">
+                <p class="mb-0">&copy; 2025 Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle atualizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS para animações -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

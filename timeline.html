@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Erguer - Linha do Tempo</title>
+    <!-- Bootstrap CSS atualizado para versão mais recente -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Adicionar AOS para animações de scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Estilos específicos para a linha do tempo */
+        .timeline-zigzag {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        /* Linha vertical central */
+        .timeline-zigzag::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary-color);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+            z-index: -1; /* Valor modificado para negativo para ficar atrás dos dots */
+        }
+        
+        /* Contêiner para cada item da linha do tempo */
+        .timeline-container {
+            position: relative;
+            width: 50%;
+            padding: 30px 60px;
+            margin-bottom: 30px;
+        }
+        
+        /* Posicionamento à esquerda e à direita */
+        .timeline-left {
+            left: 0;
+        }
+        
+        .timeline-right {
+            left: 50%;
+        }
+        
+        /* Estilo dos círculos para os anos */
+        .year-circle {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            /* Removendo a cor fixa */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 2;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para melhor destaque */
+            border: 2px solid rgba(255, 255, 255, 0.7); /* Borda sutil para destaque */
+        }
+        
+        /* Posicionar círculo do ano no lado OPOSTO ao texto */
+        .timeline-left .year-circle {
+            left: 800px; /* Posicionar à esquerda do ponto central */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-right .year-circle {
+            right: 800px; /* Posicionar à direita do ponto central */
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Estilo dos pontos (dots) */
+        .timeline-dot {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            z-index: 2;
+            background-color: var(--primary-color);
+            border: 4px solid white;
+        }
+        
+        .timeline-left .timeline-dot {
+            right: -12.5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .timeline-right .timeline-dot {
+            left: -12.5px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Conteúdo de cada item */
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid transparent; /* Prepara para a borda colorida */
+        }
+        
+        /* Cores variadas para os pontos - melhoradas para contraste */
+        .color-1 { background-color: var(--primary-color); }
+        .color-2 { background-color: var(--secondary-color); }
+        .color-3 { 
+            background-color: var(--purple-color, #9b59b6); /* Valor fallback caso a variável não esteja definida */
+        }
+        .color-4 { background-color: #00847b; } /* Verde turquesa mais escuro */
+        .color-5 { background-color: #e67e22; } /* Laranja mais escuro */
+        .color-6 { background-color: #d35400; } /* Coral mais escuro */
+        .color-7 { background-color: #1e8449; } /* Verde esmeralda mais escuro */
+        .color-8 { background-color: #c0392b; } /* Vermelho mais escuro */
+        .color-9 { background-color: #2980b9; } /* Azul petróleo mais vibrante */
+        
+        /* Estilos adicionais para melhorar o contraste */
+        .timeline-content {
+            padding: 20px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid transparent; /* Prepara para a borda colorida */
+        }
+        
+        /* Adiciona borda colorida ao conteúdo baseado na cor do ano */
+        .timeline-container.timeline-left .timeline-content {
+            border-left-color: currentColor;
+        }
+        
+        .timeline-container.timeline-right .timeline-content {
+            border-right: 5px solid transparent;
+            border-right-color: currentColor;
+        }
+        
+        /* Herda cor do círculo para o container */
+        .timeline-container[data-aos="fade-right"] {
+            color: var(--primary-color);
+        }
+        
+        .timeline-container[data-aos="fade-left"] {
+            color: var(--secondary-color);
+        }
+        
+        /* Aplicar cores específicas aos containers */
+        .timeline-container:nth-child(1) { color: var(--primary-color); }
+        .timeline-container:nth-child(2) { color: var(--secondary-color); }
+        .timeline-container:nth-child(3) { color: var(--purple-color, #9b59b6); } /* Valor fallback para o container de 2019 */
+        .timeline-container:nth-child(4) { color: #00847b; }
+        .timeline-container:nth-child(5) { color: #e67e22; }
+        .timeline-container:nth-child(6) { color: #d35400; }
+        .timeline-container:nth-child(7) { color: #1e8449; }
+        .timeline-container:nth-child(8) { color: #c0392b; }
+        .timeline-container:nth-child(9) { color: #2980b9; }
+        
+        /* Correção específica para o marco de 2019 (Ampliação local) */
+        .timeline-container:nth-of-type(3) .year-circle,
+        .timeline-container:nth-of-type(3) .timeline-dot {
+            background-color: #9b59b6; /* Roxo vibrante como fallback */
+        }
+        
+        /* Responsividade */
+        @media screen and (max-width: 992px) {
+            .timeline-zigzag::after {
+                left: 30px;
+            }
+            
+            .timeline-container {
+                width: 100%;
+                padding-left: 80px;
+                padding-right: 25px;
+                left: 0;
+            }
+            
+            .timeline-right .year-circle,
+            .timeline-left .year-circle {
+                left: -45px;
+                right: auto;
+            }
+            
+            .timeline-right .timeline-dot,
+            .timeline-left .timeline-dot {
+                left: 18px;
+                right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projeto.html">Projeto Erguer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="timeline.html" aria-current="page">Linha do tempo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da página -->
+    <header class="page-header bg-light py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold" data-aos="fade-up">Linha do Tempo</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">A trajetória e evolução do Projeto Erguer</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="py-5">
+            <div class="container">
+                <div class="timeline-zigzag">
+                    <!-- 2016 -->
+                    <div class="timeline-container timeline-left" data-aos="fade-right">
+                        <div class="year-circle color-1">2016</div>
+                        <div class="timeline-dot color-1"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Início em Lisboa</h3>
+                            <p>O projeto Erguer teve seus estudos iniciais na cidade de Lisboa, Portugal. O objetivo foi investigar a aceitabilidade e os efeitos da inclusão de stand-desks (carteiras ajustáveis) no ambiente escolar durante as aulas, com estudantes do 6º ano de uma escola local.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2018 -->
+                    <div class="timeline-container timeline-right" data-aos="fade-left">
+                        <div class="year-circle color-2">2018</div>
+                        <div class="timeline-dot color-2"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Estudo pioneiro no Brasil</h3>
+                            <p>O projeto foi transferido para o Brasil, especificamente para a cidade de Aracaju, onde foi conduzido um estudo piloto. Nessa fase, buscou-se avaliar a aceitabilidade e os efeitos da incorporação de lições fisicamente ativas com estudantes do 2º ano do ensino fundamental em uma escola municipal.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2019 -->
+                    <div class="timeline-container timeline-left" data-aos="fade-right">
+                        <div class="year-circle color-3">2019</div>
+                        <div class="timeline-dot color-3"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Ampliação local</h3>
+                            <p>Com a contemplação do Edital do CNPq e o apoio da secretaria municipal de educação de Aracaju o projeto foi ampliado para seis escolas da rede municipal, com início para 2020.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="timeline-container timeline-right" data-aos="fade-left">
+                        <div class="year-circle color-4">2020</div>
+                        <div class="timeline-dot color-4"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">COVID-19</h3>
+                            <p> O estudo piloto foi encerrado no início de 2020 devido à pandemia de COVID-19. Além disso, a ampliação prevista para seis escolas da rede municipal precisou ser adiada.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="timeline-container timeline-left" data-aos="fade-right">
+                        <div class="year-circle color-5">2022</div>
+                        <div class="timeline-dot color-5"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Retomada da ampliação</h3>
+                            <p>Com a retomada das atividades presenciais, o projeto em Aracaju com seis escolas foi oficialmente iniciado, com a proposta de acompanhar as crianças ao longo de cinco anos, de 2022 a 2027. Além das lições fisicamente ativas, foi incorporada uma nova estratégia de intervenção: as pausas ativas em sala de aula. O estudo passou então a avaliar a aceitabilidade e os efeitos dessas duas abordagens com estudantes do 1º ano do ensino fundamental de seis escolas municipais.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="timeline-container timeline-right" data-aos="fade-left">
+                        <div class="year-circle color-6">2023</div>
+                        <div class="timeline-dot color-6"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Expansão Nordeste</h3>
+                            <p>O projeto em Aracaju deu início ao segundo ano de acompanhamento. Nesse mesmo ano, o projeto foi contemplado pelo Edital Universal do CNPq, o que possibilitou a sua expansão para outras três cidades do Nordeste: Arapiraca (AL), Feira de Santana (BA) e Ilhéus (BA). Assim, o estudo passou a ser multicêntrico, com início previsto para 2025 nessas três cidades.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="timeline-container timeline-left" data-aos="fade-right">
+                        <div class="year-circle color-7">2024</div>
+                        <div class="timeline-dot color-7"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Terceiro ano de acompanhamento</h3>
+                            <p>Teve início o terceiro ano de acompanhamento em Aracaju. Também foram realizadas reuniões com os coordenadores dos centros de pesquisa nas três novas cidades, com o objetivo de definir a logística, capacitar as equipes e alinhar parcerias com as escolas que integrarão o estudo.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="timeline-container timeline-right" data-aos="fade-left">
+                        <div class="year-circle color-8">2025</div>
+                        <div class="timeline-dot color-8"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Quarto ano e início do Multicêntrico</h3>
+                            <p>O projeto em Aracaju iniciou seu quarto ano de acompanhamento, ao mesmo tempo em que se deu início à implementação do estudo multicêntrico, com previsão inicial de um ano de duração.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2026 -->
+                    <div class="timeline-container timeline-left" data-aos="fade-right">
+                        <div class="year-circle color-9">2026</div>
+                        <div class="timeline-dot color-9"></div>
+                        <div class="timeline-content">
+                            <h3 class="h5 fw-bold">Conclusão do acompanhamento</h3>
+                            <p>Está previsto o quinto e último ano de acompanhamento em Aracaju, juntamente com a divulgação dos resultados do projeto por meio de artigos científicos e relatórios técnicos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Sobre</h3>
+                    <p>O Projeto Erguer é uma iniciativa de investigação interessada na integração entre movimento, cognição e aprendizagem.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="projeto.html" class="text-white">Projeto</a></li>
+                        <li><a href="timeline.html" class="text-white">Linha do tempo</a></li>
+                        <li><a href="recursos.html" class="text-white">Recursos</a></li>
+                        <li><a href="noticias.html" class="text-white">Notícias</a></li>
+                        <li><a href="contato.html" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> erguer.projeto@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-3 border-top border-secondary text-center">
+                <p class="mb-0">&copy; 2025 Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle atualizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS para animações -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

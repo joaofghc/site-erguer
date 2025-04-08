@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Erguer - Recursos</title>
+    <!-- Bootstrap CSS atualizado para versão mais recente -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Adicionar AOS para animações de scroll -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projeto.html">Projeto Erguer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Linha do tempo</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="recursos.html" aria-current="page">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da página -->
+    <header class="page-header bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="fw-bold">Recursos Educacionais</h1>
+                    <p class="lead">Materiais e ferramentas para transformar o ambiente de aprendizagem</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="img/recursos-ilustracao.jpg" alt="Recursos Educacionais" class="img-fluid rounded shadow-sm">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <!-- Tabs de recursos -->
+        <section class="py-5">
+            <div class="container">
+                <ul class="nav nav-pills mb-4 justify-content-center flex-column flex-md-row" id="resourcesTabs" role="tablist" data-aos="fade-up">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="professores-tab" data-bs-toggle="pill" data-bs-target="#professores" type="button" role="tab" aria-controls="professores" aria-selected="true">
+                            <i class="fas fa-chalkboard-teacher me-2"></i>Para Professores
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pesquisadores-tab" data-bs-toggle="pill" data-bs-target="#pesquisadores" type="button" role="tab" aria-controls="pesquisadores" aria-selected="false">
+                            <i class="fas fa-microscope me-2"></i>Para Pesquisadores
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="licoes-tab" data-bs-toggle="pill" data-bs-target="#licoes" type="button" role="tab" aria-controls="licoes" aria-selected="false">
+                            <i class="fas fa-book me-2"></i>Lições
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pausas-tab" data-bs-toggle="pill" data-bs-target="#pausas" type="button" role="tab" aria-controls="pausas" aria-selected="false">
+                            <i class="fas fa-running me-2"></i>Pausas Ativas
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content" id="resourcesTabsContent">
+                    <!-- Para Professores -->
+                    <div class="tab-pane fade show active" id="professores" role="tabpanel" aria-labelledby="professores-tab">
+                        <div class="row g-4">
+                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/resource1.jpg" class="card-img-top" alt="Material Didático">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Guia do Professor</h3>
+                                        <p class="card-text">Manual completo com orientações pedagógicas e metodológicas para implementação do Projeto Erguer em sala de aula.</p>
+                                        <a href="#" class="btn btn-outline-primary">Download PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/resource2.jpg" class="card-img-top" alt="Material Didático">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Planejamento de Aulas</h3>
+                                        <p class="card-text">Modelos e exemplos de planos de aula que integram movimento e aprendizagem para diferentes disciplinas.</p>
+                                        <a href="#" class="btn btn-outline-primary">Download PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                                <div class="card h-100 border-0 shadow-sm">
+                                    <img src="img/resource3.jpg" class="card-img-top" alt="Material Didático">
+                                    <div class="card-body">
+                                        <h3 class="card-title h5">Avaliação do Processo</h3>
+                                        <p class="card-text">Ferramentas e critérios para avaliar o progresso dos alunos em atividades que integram movimento e aprendizagem.</p>
+                                        <a href="#" class="btn btn-outline-primary">Download PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Para Pesquisadores -->
+                    <div class="tab-pane fade" id="pesquisadores" role="tabpanel" aria-labelledby="pesquisadores-tab">
+                        <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 mb-4">Publicações Científicas</h3>
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Título</th>
+                                                <th>Autores</th>
+                                                <th>Revista/Evento</th>
+                                                <th>Ano</th>
+                                                <th>Ação</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Impacto de ambientes educacionais dinâmicos no desenvolvimento cognitivo</td>
+                                                <td>Silva, P.; Oliveira, M.</td>
+                                                <td>Revista Brasileira de Educação</td>
+                                                <td>2022</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">PDF</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Movimento e aprendizagem: um estudo de caso em escolas públicas</td>
+                                                <td>Santos, C.; Mendes, A.; Costa, J.</td>
+                                                <td>Educação & Sociedade</td>
+                                                <td>2022</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">PDF</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Redesenho de espaços escolares: metodologia e resultados preliminares</td>
+                                                <td>Costa, J.; Freitas, L.</td>
+                                                <td>Conferência Internacional de Educação</td>
+                                                <td>2023</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">PDF</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card border-0 shadow-sm" data-aos="fade-up">
+                            <div class="card-body p-4">
+                                <h3 class="card-title h5 mb-3">Protocolos de Pesquisa</h3>
+                                <div class="list-group">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="h6 mb-0">Protocolo de Observação em Sala</h4>
+                                            <small class="text-muted">Metodologia para coleta de dados observacionais</small>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">PDF</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="h6 mb-0">Instrumentos de Avaliação Cognitiva</h4>
+                                            <small class="text-muted">Testes validados para mensuração de resultados</small>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">PDF</span>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <h4 class="h6 mb-0">Guia para Pesquisa Longitudinal</h4>
+                                            <small class="text-muted">Orientações para estudos de longo prazo</small>
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">PDF</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lições -->
+                    <div class="tab-pane fade" id="licoes" role="tabpanel" aria-labelledby="licoes-tab">
+                        <h3 class="text-center mb-4">Atividades de Aprendizagem com Movimento</h3>
+                        <div class="row g-4">
+                            <!-- Cartão Flip 1 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                                                    <i class="fas fa-atom fa-3x mb-3 text-primary"></i>
+                                                    <h3 class="card-title h5">Átomos em Movimento</h3>
+                                                    <p class="card-text small text-muted">Ciências - Ensino Fundamental</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Átomos em Movimento</h3>
+                                                    <h6 class="mb-2">Objetivos:</h6>
+                                                    <ul class="small mb-3">
+                                                        <li>Compreender a estrutura atômica</li>
+                                                        <li>Visualizar o movimento de partículas</li>
+                                                        <li>Experimentar conceitos físicos</li>
+                                                    </ul>
+                                                    <h6 class="mb-2">Materiais:</h6>
+                                                    <p class="small">Espaço amplo, cartões coloridos, cronômetro</p>
+                                                    <a href="#" class="btn btn-sm btn-primary mt-2">Plano Completo</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cartão Flip 2 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center alinhamento-center">
+                                                    <i class="fas fa-calculator fa-3x mb-3 text-primary"></i>
+                                                    <h3 class="card-title h5">Matemática em Passos</h3>
+                                                    <p class="card-text small text-muted">Matemática - Ensino Fundamental</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Matemática em Passos</h3>
+                                                    <h6 class="mb-2">Objetivos:</h6>
+                                                    <ul class="small mb-3">
+                                                        <li>Praticar operações aritméticas</li>
+                                                        <li>Desenvolver raciocínio lógico</li>
+                                                        <li>Estimular percepção espacial</li>
+                                                    </ul>
+                                                    <h6 class="mb-2">Materiais:</h6>
+                                                    <p class="small">Fita adesiva, cartões numéricos, dado grande</p>
+                                                    <a href="#" class="btn btn-sm btn-primary mt-2">Plano Completo</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cartão Flip 3 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center alinhamento-center">
+                                                    <i class="fas fa-book fa-3x mb-3 text-primary"></i>
+                                                    <h3 class="card-title h5">Narrativas Corporais</h3>
+                                                    <p class="card-text small text-muted">Português - Ensino Fundamental</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Narrativas Corporais</h3>
+                                                    <h6 class="mb-2">Objetivos:</h6>
+                                                    <ul class="small mb-3">
+                                                        <li>Desenvolver compreensão textual</li>
+                                                        <li>Explorar elementos narrativos</li>
+                                                        <li>Estimular criatividade e expressão</li>
+                                                    </ul>
+                                                    <h6 class="mb-2">Materiais:</h6>
+                                                    <p class="small">Textos curtos, cartões de ação, área livre</p>
+                                                    <a href="#" class="btn btn-sm btn-primary mt-2">Plano Completo</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pausas Ativas -->
+                    <div class="tab-pane fade" id="pausas" role="tabpanel" aria-labelledby="pausas-tab">
+                        <h3 class="text-center mb-4">Pausas Ativas para Sala de Aula</h3>
+                        <div class="row g-4">
+                            <!-- Cartão Flip 1 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center alinhamento-center">
+                                                    <i class="fas fa-brain fa-3x mb-3 text-danger"></i>
+                                                    <h3 class="card-title h5">Ativação Cerebral</h3>
+                                                    <p class="card-text small text-muted">Duração: 3-5 minutos</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Ativação Cerebral</h3>
+                                                    <h6 class="mb-2">Passos:</h6>
+                                                    <ol class="small mb-3">
+                                                        <li>Alunos ficam em pé ao lado das carteiras</li>
+                                                        <li>Tocar orelha direita com mão esquerda</li>
+                                                        <li>Tocar nariz com mão direita</li>
+                                                        <li>Alternar os movimentos por 1 minuto</li>
+                                                        <li>Aumentar velocidade gradualmente</li>
+                                                    </ol>
+                                                    <h6 class="mb-2">Benefícios:</h6>
+                                                    <p class="small">Estimula conexões neurais, foco, atenção e coordenação motora</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cartão Flip 2 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center alinhamento-center">
+                                                    <i class="fas fa-wind fa-3x mb-3 text-danger"></i>
+                                                    <h3 class="card-title h5">Respiração Energizante</h3>
+                                                    <p class="card-text small text-muted">Duração: 2-3 minutos</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Respiração Energizante</h3>
+                                                    <h6 class="mb-2">Passos:</h6>
+                                                    <ol class="small mb-3">
+                                                        <li>Postura ereta, pés afastados na largura dos ombros</li>
+                                                        <li>Inspirar profundamente pelo nariz, elevando os braços</li>
+                                                        <li>Expirar pela boca, abaixando os braços</li>
+                                                        <li>Repetir 10 vezes, aumentando ritmo gradualmente</li>
+                                                    </ol>
+                                                    <h6 class="mb-2">Benefícios:</h6>
+                                                    <p class="small">Aumenta oxigenação cerebral, reduz estresse e melhora concentração</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Cartão Flip 3 -->
+                            <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                        <div class="flip-card-front">
+                                            <div class="card h-100 border-0 shadow-sm text-center">
+                                                <div class="card-body d-flex flex-column justify-content-center alinhamento-center">
+                                                    <i class="fas fa-bolt fa-3x mb-3 text-danger"></i>
+                                                    <h3 class="card-title h5">Alongamento Relâmpago</h3>
+                                                    <p class="card-text small text-muted">Duração: 3 minutos</p>
+                                                    <span class="badge bg-secondary mt-2">Passe o mouse para ver mais</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="flip-card-back">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body">
+                                                    <h3 class="card-title h5 mb-3">Alongamento Relâmpago</h3>
+                                                    <h6 class="mb-2">Passos:</h6>
+                                                    <ol class="small mb-3">
+                                                        <li>Alunos ficam em pé</li>
+                                                        <li>Esticar os braços acima da cabeça por 20s</li>
+                                                        <li>Rotação de ombros para frente e para trás</li>
+                                                        <li>Flexionar o pescoço suavemente em todas direções</li>
+                                                        <li>Finalizar com leve agitação de braços e pernas</li>
+                                                    </ol>
+                                                    <h6 class="mb-2">Benefícios:</h6>
+                                                    <p class="small">Alivia tensão muscular, melhora circulação e postura</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- CSS para os cartões flip -->
+    <style>
+        .flip-card {
+            background-color: transparent;
+            perspective: 1000px;
+            height: 300px;
+        }
+        
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0.25rem;
+            overflow: hidden;
+        }
+        
+        .flip-card-front {
+            color: black;
+        }
+        
+        .flip-card-back {
+            background-color: white;
+            transform: rotateY(180deg);
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Sobre</h3>
+                    <p>O Projeto Erguer é uma iniciativa de investigação interessada na integração entre movimento, cognição e aprendizagem.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="projeto.html" class="text-white">Projeto</a></li>
+                        <li><a href="timeline.html" class="text-white">Linha do tempo</a></li>
+                        <li><a href="recursos.html" class="text-white">Recursos</a></li>
+                        <li><a href="noticias.html" class="text-white">Notícias</a></li>
+                        <li><a href="contato.html" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> erguer.projeto@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-3 border-top border-secondary text-center">
+                <p class="mb-0">&copy; 2025 Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle atualizado -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS para animações -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

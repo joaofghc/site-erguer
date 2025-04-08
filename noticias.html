@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Erguer - Notícias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="img/logo.svg" alt="Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projeto.html">Projeto Erguer</a></li>
+                    <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                    <li class="nav-item"><a class="nav-link" href="timeline.html">Linha do tempo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="recursos.html">Recursos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="noticias.html" aria-current="page">Notícias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header da página -->
+    <header class="page-header bg-light py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold" data-aos="fade-up">Notícias</h1>
+            <p class="lead" data-aos="fade-up" data-aos-delay="100">Fique por dentro das novidades do Projeto Erguer</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="py-5">
+        <div class="container">
+            <!-- Sistema de pesquisa e filtros -->
+            <section class="mb-4" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="input-group">
+                            <input type="text" id="pesquisa-noticias" class="form-control" placeholder="Pesquisar notícias...">
+                            <button class="btn btn-primary" type="button" id="btn-pesquisar">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="d-flex align-items-center">
+                            <label class="me-2">Filtrar por tópico:</label>
+                            <select class="form-select" id="filtro-topicos">
+                                <option value="">Todos os tópicos</option>
+                                <!-- Os tópicos serão carregados dinamicamente -->
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div id="topicos-container" class="d-flex flex-wrap gap-2">
+                        <!-- Tags de tópicos populares serão carregadas aqui -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção de notícias de mídia -->
+            <section class="mb-5" data-aos="fade-up">
+                <h2 class="mb-4">Notícias</h2>
+                <div class="row g-4" id="noticias-container">
+                    <!-- As notícias serão carregadas aqui dinamicamente via JavaScript -->
+                    <div class="col-12 text-center" id="loading-news">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                        <p>Carregando notícias...</p>
+                    </div>
+                </div>
+                <div class="mt-4 text-center" id="sem-resultados" style="display: none;">
+                    <p>Nenhuma notícia encontrada para a pesquisa atual.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Sobre</h3>
+                    <p>O Projeto Erguer é uma iniciativa de investigação interessada na integração entre movimento, cognição e aprendizagem.</p>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h3>Links Rápidos</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="projeto.html" class="text-white">Projeto</a></li>
+                        <li><a href="timeline.html" class="text-white">Linha do tempo</a></li>
+                        <li><a href="recursos.html" class="text-white">Recursos</a></li>
+                        <li><a href="noticias.html" class="text-white">Notícias</a></li>
+                        <li><a href="contato.html" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Contato</h3>
+                    <p><i class="fas fa-envelope"></i> erguer.projeto@gmail.com</p>
+                    <div class="social-icons">
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-4 pt-3 border-top border-secondary text-center">
+                <p class="mb-0">&copy; 2025 Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/noticias.js"></script>
+</body>
+</html>
