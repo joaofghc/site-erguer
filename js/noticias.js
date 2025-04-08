@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para carregar as notícias do arquivo JSON
     async function carregarNoticias() {
         try {
-            const response = await fetch('data/noticias.json');
+            const response = await fetch('https://raw.githubusercontent.com/joaofghc/site-erguer/refs/heads/master/data/noticias.json');
             if (!response.ok) {
                 throw new Error('Falha ao carregar notícias');
             }
