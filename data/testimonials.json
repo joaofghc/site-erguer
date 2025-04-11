@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Maria Silva",
+    "role": "Professora",
+    "institution": "E.E. Paulo Freire",
+    "text": "O Projeto Erguer transformou completamente a dinâmica da minha sala de aula. Os alunos estão mais engajados e a capacidade de concentração melhorou significativamente.",
+    "featured": true,
+    "date": "2024-03-15"
+  },
+  {
+    "id": 2,
+    "name": "Carlos Oliveira",
+    "role": "Coordenador Pedagógico",
+    "institution": "Colégio Monteiro",
+    "text": "Como coordenador pedagógico, observei resultados impressionantes após a implementação das estratégias do Projeto Erguer. Notamos melhora no comportamento e no desempenho acadêmico.",
+    "featured": true,
+    "date": "2024-02-20"
+  },
+  {
+    "id": 3,
+    "name": "Ana Beatriz",
+    "role": "Professora de Ciências",
+    "institution": "Escola Municipal Osvaldo Cruz",
+    "text": "Incorporar movimento na aula de ciências foi um desafio no início, mas os resultados foram surpreendentes. Os alunos assimilam os conceitos com muito mais facilidade quando podem experimentá-los fisicamente.",
+    "featured": false,
+    "date": "2024-03-10"
+  },
+  {
+    "id": 4,
+    "name": "Roberto Mendes",
+    "role": "Diretor",
+    "institution": "Colégio Estadual Anísio Teixeira",
+    "text": "A participação da nossa escola no Projeto Erguer trouxe benefícios que extrapolaram a sala de aula. Observamos melhoria no clima escolar como um todo e maior engajamento dos professores.",
+    "featured": true,
+    "date": "2024-01-25"
+  }
+]
