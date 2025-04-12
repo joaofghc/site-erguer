@@ -269,8 +269,8 @@
         // Função para carregar depoimentos do arquivo JSON
         async function loadTestimonials() {
             try {
-                // Caminho local para o arquivo JSON de depoimentos
-                const response = await fetch('https://raw.githubusercontent.com/joaofghc/site-erguer/refs/heads/master/data/testimonials.json');
+                // Usando caminho relativo para funcionar tanto localmente quanto no GitHub Pages
+                const response = await fetch('data/testimonials.json');
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! Status: ${response.status}`);
