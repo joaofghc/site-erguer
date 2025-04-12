@@ -320,6 +320,13 @@ a:hover {
     border-color: rgba(0,0,0,.125);
 }
 
+/* Estilo para os badges de centro */
+.badge.rounded-pill {
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 0.25em 0.6em;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary-color);

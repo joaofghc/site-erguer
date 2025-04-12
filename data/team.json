@@ -1,0 +1,228 @@
+{
+  "coordenacao": [
+    {
+      "nome": "Prof. Danilo Silva",
+      "cargo": "Coordenador Geral",
+      "formacao": "Doutor em Educação Física",
+      "email": "danilorpsilva@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/danilo.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Prof. Julian Tejada",
+      "cargo": "Coordenador Local",
+      "formacao": "Doutor em Psicobiologia",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/julian.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Profa. Thayse Gomes",
+      "cargo": "Coordenadora Local",
+      "formacao": "Doutora em Ciências do Desporto",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Profa. Heike Schmitz",
+      "cargo": "Coordenadora Local",
+      "formacao": "Doutora em Educação",
+      "email": "email@gmail.com",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Prof. Leornado Luz",
+      "cargo": "Coordenador Local",
+      "formacao": "Doutor em Ciências do Desporto",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Arapiraca"
+    },
+    {
+      "nome": "Prof. Gilmar Jesus",
+      "cargo": "Coordenador Local",
+      "formacao": "Doutor em Educação Física",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Feira de Santana"
+    },
+    {
+      "nome": "Profa. Lizziane Dias",
+      "cargo": "Coordenadora Local",
+      "formacao": "Doutora em Saúde Coletiva",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Feira de Santana"
+    },
+    {
+      "nome": "Prof. David Ohara",
+      "cargo": "Coordenador Local",
+      "formacao": "Doutor em Educação Física",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Ilhéus"
+    },
+    {
+      "nome": "Prof. João Melo",
+      "cargo": "Coordenador Operacional",
+      "formacao": "Doutorando em Ciências da Saúde",
+      "email": "joaofghc@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/joao.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Prof. Ywgne Nascimento",
+      "cargo": "Coordenador Operacional",
+      "formacao": "Doutorando em Ciências da Saúde",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Profa. Adrielly Silva",
+      "cargo": "Coordenadora Operacional",
+      "formacao": "Mestranda em a definir",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Arapiraca"
+    },
+    {
+      "nome": "Profa. Jennifer Brito",
+      "cargo": "Coordenadora Operacional",
+      "formacao": "Mestranda em Educação Física",
+      "email": "email@gmail.com",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Ilhéus"
+    },
+    {
+      "nome": "Profa. Larissa Gandarela",
+      "cargo": "Supervisora",
+      "formacao": "Doutoranda em Ciências da Saúde",
+      "email": "",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Prof. David Nunes",
+      "cargo": "Supervisor",
+      "formacao": "Mestrando em Ciências do Movimento",
+      "email": "",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    }
+  ],
+  "colaboradores": [
+    {
+      "nome": "Pabla Santos",
+      "cargo": "Estagiária",
+      "formacao": "Estudante de Psicologia",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Catarina Aquino",
+      "cargo": "Estagiária",
+      "formacao": "Estudante de Educação Física",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "João Souza",
+      "cargo": "Estagiário",
+      "formacao": "Estudante de Educação Física",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Andrey Fontes",
+      "cargo": "Estagiário",
+      "formacao": "Estudante de Educação Física",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Felipe Santana",
+      "cargo": "Estagiário",
+      "formacao": "Estudante de Educação Física",
+      "status": "Ativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Giulia Silveira",
+      "cargo": "Estagiária",
+      "formacao": "Estudante de Psicologia",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Felipe Macedo",
+      "cargo": "Estagiário",
+      "formacao": "Estudante de Pedagogia",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Amanda Vasconcelos",
+      "cargo": "Estagiária",
+      "formacao": "Estudante de Educação Física",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Alana Cerqueira",
+      "cargo": "Estagiária",
+      "formacao": "Estudante de Educação Física",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Guilherme Ferreira",
+      "cargo": "Bolsista de iniciação",
+      "formacao": "Estudante de Educação Física",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Willams Andrade",
+      "cargo": "Bolsista de iniciação",
+      "formacao": "Estudante de Educação Física",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    },
+    {
+      "nome": "Beatriz Noia",
+      "cargo": "Colaboradora",
+      "formacao": "Mestranda em Educação",
+      "status": "Inativo",
+      "imagem": "img/team/profile.jpg",
+      "centro": "Aracaju"
+    }
+  ]
+}

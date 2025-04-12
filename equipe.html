@@ -34,184 +34,41 @@
     </nav>
 
     <!-- Header/Banner Section -->
-    <header class="page-header">
-        <div class="page-header-bg"></div>
-        <div class="page-header-overlay"></div>
-        <div class="container">
-            <div class="page-header-content text-center" data-aos="fade-up">
-                <h1 class="display-4 fw-bold">Nossa Equipe</h1>
-                <p class="lead">Conheça os profissionais por trás do Projeto Erguer</p>
-            </div>
+    <header class="page-header bg-light py-5">
+        <div class="container text-center">
+            <h1 class="fw-bold" data-aos="fade-up">Nossa equipe</h1>
+            <p class="lead" data-aos="fade-up">Conheça os profissionais por trás do Projeto Erguer</p>
         </div>
     </header>
 
     <!-- Conteúdo principal -->
     <main>
-        <!-- Seção Coordenação Geral -->
+        <!-- Seção Coordenação (incluindo todos os coordenadores e supervisores) -->
         <section class="team-section py-5">
             <div class="container">
-                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Coordenação Geral</h2>
-                <div class="row g-4">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-card card h-100 border-0 shadow-sm">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="img/team/placeholder.jpg" class="img-fluid team-img" alt="Coordenadora">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h3 class="card-title fw-bold">Dr. Maria Silva</h3>
-                                        <p class="text-muted">Coordenação Geral</p>
-                                        <p class="text-muted small">Vínculo: 2022 - atualmente</p>
-                                        <p class="card-text">Doutora em Educação, com especialização em metodologias ativas e líder da Coordenação Geral do Projeto Erguer.</p>
-                                        <div class="social-icons">
-                                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                            <a href="#" class="social-icon"><i class="far fa-envelope"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Coordenação</h2>
+                <div class="row g-3" id="coordenacao-container">
+                    <!-- Os cards da coordenação serão gerados dinamicamente via JavaScript -->
                 </div>
             </div>
         </section>
         
-        <!-- Seção Coordenação Operacional -->
+        <!-- Seção Colaboradores -->
         <section class="team-section py-5 bg-light">
             <div class="container">
-                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Coordenação Operacional</h2>
-                <div class="row g-4">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-card card h-100 border-0 shadow-sm">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="img/team/placeholder.jpg" class="img-fluid team-img" alt="Coordenador">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h3 class="card-title fw-bold">Dr. João Santos</h3>
-                                        <p class="text-muted">Coordenação Operacional</p>
-                                        <p class="text-muted small">Vínculo: 2022 - 2024</p>
-                                        <p class="card-text">Especialista em Neurociência Aplicada à Educação, responsável pela coordenação operacional do Projeto Erguer.</p>
-                                        <div class="social-icons">
-                                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                            <a href="#" class="social-icon"><i class="far fa-envelope"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Colaboradores</h2>
+                
+                <!-- Filtro para mostrar apenas ativos ou todos -->
+                <div class="text-center mb-4" data-aos="fade-up">
+                    <div class="btn-group" role="group" aria-label="Filtrar colaboradores">
+                        <button type="button" class="btn btn-primary active" id="btn-ativos">Ativos</button>
+                        <button type="button" class="btn btn-outline-primary" id="btn-todos">Todos</button>
                     </div>
                 </div>
-            </div>
-        </section>
-        
-        <!-- Seção Colaboradores (Bolsistas, Estagiários e Voluntários) -->
-        <section class="team-section py-5">
-            <div class="container">
-                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Colaboradores (Bolsistas, Estagiários e Voluntários)</h2>
-                <div class="row row-cols-1 row-cols-md-4 g-4">
-                    <div class="col" data-aos="fade-up" data-aos-delay="100">
-                        <div class="team-card-xs card h-100 text-center border-0 shadow-sm">
-                            <img src="img/team/placeholder.jpg" class="card-img-top" alt="Colaborador">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Carlos Mendes</h5>
-                                <p class="text-muted small">Professor Colaborador</p>
-                                <p class="text-muted small">Vínculo: 2022 - atualmente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade-up" data-aos-delay="150">
-                        <div class="team-card-xs card h-100 text-center border-0 shadow-sm">
-                            <img src="img/team/placeholder.jpg" class="card-img-top" alt="Colaborador">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Fernanda Lima</h5>
-                                <p class="text-muted small">Pedagoga</p>
-                                <p class="text-muted small">Vínculo: 2022 - atualmente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade-up" data-aos-delay="200">
-                        <div class="team-card-xs card h-100 text-center border-0 shadow-sm">
-                            <img src="img/team/placeholder.jpg" class="card-img-top" alt="Colaborador">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Marcos Alves</h5>
-                                <p class="text-muted small">Psicólogo Educacional</p>
-                                <p class="text-muted small">Vínculo: 2022 - atualmente</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col" data-aos="fade-up" data-aos-delay="250">
-                        <div class="team-card-xs card h-100 text-center border-0 shadow-sm">
-                            <img src="img/team/placeholder.jpg" class="card-img-top" alt="Colaborador">
-                            <div class="card-body">
-                                <h5 class="card-title fw-bold">Sandra Rocha</h5>
-                                <p class="text-muted small">Diretora Escolar</p>
-                                <p class="text-muted small">Vínculo: 2022 - atualmente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção Apoiadores -->
-        <section class="team-section py-5 bg-light">
-            <div class="container">
-                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Apoiadores</h2>
-                <div class="row g-4">
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 border-0 shadow-sm text-center">
-                            <div class="card-body">
-                                <img src="img/logos/universidade_xyz.png" class="img-fluid mb-3" alt="Universidade XYZ logo">
-                                <h3 class="card-title fw-bold">Universidade XYZ</h3>
-                                <p class="card-text">Parceira acadêmica.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
-                        <div class="card h-100 border-0 shadow-sm text-center">
-                            <div class="card-body">
-                                <img src="img/logos/secretaria_prefeitura_abc.png" class="img-fluid mb-3" alt="Secretaria/Prefeitura ABC logo">
-                                <h3 class="card-title fw-bold">Secretaria/Prefeitura ABC</h3>
-                                <p class="card-text">Apoio institucional.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Seção Financiadores -->
-        <section class="team-section py-5">
-            <div class="container">
-                <h2 class="section-title text-center mb-5 fw-bold" data-aos="fade-up">Financiadores</h2>
-                <div class="row g-4">
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card h-100 border-0 shadow-sm text-center">
-                            <div class="card-body">
-                                <img src="img/logos/cnqp.png" class="img-fluid mb-3" alt="CNQp logo">
-                                <h3 class="card-title fw-bold">CNQp</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                        <div class="card h-100 border-0 shadow-sm text-center">
-                            <div class="card-body">
-                                <img src="img/logos/capes.png" class="img-fluid mb-3" alt="CAPES logo">
-                                <h3 class="card-title fw-bold">CAPES</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card h-100 border-0 shadow-sm text-center">
-                            <div class="card-body">
-                                <img src="img/logos/fapitecse.png" class="img-fluid mb-3" alt="FAPITEC/SE logo">
-                                <h3 class="card-title fw-bold">FAPITEC/SE</h3>
-                            </div>
-                        </div>
-                    </div>
+                
+                <!-- Colaboradores Grid -->
+                <div class="row row-cols-2 row-cols-md-5 g-3" id="colaboradores-container">
+                    <!-- Os cards dos colaboradores serão gerados dinamicamente via JavaScript -->
                 </div>
             </div>
         </section>
@@ -255,5 +112,8 @@
     <!-- AOS para animações -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="js/main.js"></script>
+    
+    <!-- Script para carregar e renderizar os dados da equipe -->
+    <script src="js/team.js"></script>
 </body>
 </html>
